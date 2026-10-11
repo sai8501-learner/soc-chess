@@ -1,0 +1,19 @@
+{
+    "pipeline": "network",
+    "dataset": "network_merged.csv",
+    "comparison_date": "2026-08-24T11:18:07.435566",
+    "Random Forest": {
+        "accuracy": 0.993892,
+        "precision": 0.993915,
+        "recall": 0.993892,
+        "macro_f1": 0.992938,
+        "weighted_f1": 0.993898
+    },
+    "XGBoost": {
+        "accuracy": 0.9937,
+        "precision": 0.993708,
+        "recall": 0.9937,
+        "macro_f1": 0.992682,
+        "weighted_f1": 0.993691
+    }
+}

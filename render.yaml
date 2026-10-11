@@ -1,0 +1,62 @@
+# ==============================================================================
+# RENDER BLUEPRINT (render.yaml) — SOC CHESS CYBERSECURITY PLATFORM
+# Documentation: https://render.com/docs/blueprint-spec
+# ==============================================================================
+
+services:
+  - type: web
+    name: soc-chess
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeploy: true
+
+    envVars:
+      # Application Core
+      - key: APP_NAME
+        value: SOC_CHESS
+      - key: BACKEND_HOST
+        value: 0.0.0.0
+      - key: AUTH_ENABLED
+        value: "true"
+      - key: ACCESS_TOKEN_TTL_MINUTES
+        value: "480"
+      - key: JWT_SECRET
+        generateValue: true
+
+      # Storage & Database (SQLite autonomous mode on Render Free Tier)
+      - key: USE_SQLITE
+        value: "true"
+      - key: SQLITE_DB_PATH
+        value: soc_chess.db
+
+      # (Optional) External MySQL Configuration (e.g. Aiven, Clever Cloud, AWS RDS)
+      # Uncomment and set if you wish to use remote MySQL instead of SQLite:
+      # - key: MYSQL_HOST
+      #   sync: false
+      # - key: MYSQL_PORT
+      #   value: "3306"
+      # - key: MYSQL_DATABASE
+      #   value: soc_chess
+      # - key: MYSQL_USERNAME
+      #   sync: false
+      # - key: MYSQL_PASSWORD
+      #   sync: false
+
+      # AI & Threat Intelligence Providers
+      - key: LLM_ENABLED
+        value: "true"
+      - key: NVIDIA_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ABUSEIPDB_API_KEY
+        sync: false
+      - key: VIRUSTOTAL_API_KEY
+        sync: false
+      - key: OTX_API_KEY
+        sync: false

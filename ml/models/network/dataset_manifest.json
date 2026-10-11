@@ -1,0 +1,19 @@
+{
+  "version": "MLP-NN-1790528356",
+  "timestamp": "2026-09-27 22:29:43",
+  "samples": {
+    "total": 150006,
+    "train_samples": 105004,
+    "val_samples": 22501,
+    "test_samples": 22501
+  },
+  "split_ratios": {
+    "training_ratio": 0.7,
+    "validation_ratio": 0.15,
+    "test_ratio": 0.15
+  },
+  "datasets_ingested": [
+    "datasets/network/CIC-IDS2017",
+    "datasets/network/UNSW-NB15"
+  ]
+}

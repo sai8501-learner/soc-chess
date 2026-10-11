@@ -1,0 +1,3 @@
+2026-08-26 10:42:01 WIN-SRV01 EventCode=4625 Failed login attempt for user Administrator from 192.168.56.104 port 54321 proto=TCP
+2026-08-26 10:42:05 WIN-SRV01 EventCode=4625 Failed login attempt for user Administrator from 192.168.56.104 port 54322 proto=TCP
+2026-08-26 10:42:10 WIN-SRV01 EventCode=4624 Successful login for user SYSTEM from 127.0.0.1 port 0 proto=LOG

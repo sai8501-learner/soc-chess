@@ -1,0 +1,171 @@
+{
+  "version": "MLP-NN-1790528356",
+  "classes": [
+    "Botnet",
+    "Brute Force",
+    "DDoS",
+    "DoS",
+    "Exploits",
+    "Infiltration",
+    "Normal",
+    "Port Scan",
+    "Web Attack"
+  ],
+  "confusion_matrix": [
+    [
+      6093,
+      0,
+      0,
+      0,
+      0,
+      0,
+      8,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      7458,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      145,
+      0,
+      0,
+      0,
+      0,
+      0,
+      7377,
+      1260,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      157,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "per_class_metrics": {
+    "Botnet": {
+      "precision": 0.9768,
+      "recall": 0.9987,
+      "f1_score": 0.9876,
+      "support": 6101
+    },
+    "Brute Force": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "DDoS": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 1
+    },
+    "DoS": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 7458
+    },
+    "Exploits": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Infiltration": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Normal": {
+      "precision": 0.9986,
+      "recall": 0.84,
+      "f1_score": 0.9125,
+      "support": 8782
+    },
+    "Port Scan": {
+      "precision": 0.1108,
+      "recall": 0.9874,
+      "f1_score": 0.1992,
+      "support": 159
+    },
+    "Web Attack": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 0
+    }
+  }
+}

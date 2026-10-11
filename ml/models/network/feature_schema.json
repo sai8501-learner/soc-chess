@@ -1,0 +1,44 @@
+{
+  "version": "MLP-NN-1790528356",
+  "model_type": "Multi-Layer Perceptron (MLP) Neural Network",
+  "feature_count": 19,
+  "feature_names": [
+    "src_port",
+    "dst_port",
+    "protocol",
+    "flow_duration",
+    "fwd_packets",
+    "bwd_packets",
+    "fwd_bytes",
+    "bwd_bytes",
+    "flow_bytes_s",
+    "flow_packets_s",
+    "packet_length_mean",
+    "packet_length_std",
+    "syn_flag_cnt",
+    "ack_flag_cnt",
+    "psh_flag_cnt",
+    "fin_flag_cnt",
+    "rst_flag_cnt",
+    "init_fwd_win_byts",
+    "init_bwd_win_byts"
+  ],
+  "classes": [
+    "Botnet",
+    "Brute Force",
+    "DDoS",
+    "DoS",
+    "Exploits",
+    "Infiltration",
+    "Normal",
+    "Port Scan",
+    "Web Attack"
+  ],
+  "hidden_layers": [
+    128,
+    64,
+    32
+  ],
+  "activation": "relu",
+  "timestamp": "2026-09-27 22:29:43"
+}

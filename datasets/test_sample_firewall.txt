@@ -1,0 +1,2 @@
+ALERT [1:1001:1] Potential PortScan detected from 192.168.56.104:54321 to 192.168.56.107:80 TCP
+ALERT [1:1002:1] High volume DDoS flood detected from 192.168.56.104:54322 to 192.168.56.107:443 TCP

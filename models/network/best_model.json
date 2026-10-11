@@ -1,0 +1,23 @@
+{
+    "pipeline": "network",
+    "algorithm": "Random Forest",
+    "model_path": "C:\\wamp64\\www\\soc-chess\\models\\network\\random_forest.pkl",
+    "preprocessor_path": "C:\\wamp64\\www\\soc-chess\\models\\network\\preprocessor.pkl",
+    "label_encoder_path": "C:\\wamp64\\www\\soc-chess\\models\\network\\label_encoder.pkl",
+    "features_path": "C:\\wamp64\\www\\soc-chess\\models\\network\\features.json",
+    "dataset": "network_merged.csv",
+    "training_date": "2026-08-24T11:18:07.437390",
+    "number_of_records": 1200000,
+    "number_of_features": 46,
+    "classes": [
+        "ATTACK",
+        "NORMAL"
+    ],
+    "metrics": {
+        "accuracy": 0.993892,
+        "precision": 0.993915,
+        "recall": 0.993892,
+        "macro_f1": 0.992938,
+        "weighted_f1": 0.993898
+    }
+}

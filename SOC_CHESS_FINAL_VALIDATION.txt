@@ -1,0 +1,119 @@
+================================================================================
+          SOC CHESS — FINAL COMPREHENSIVE VALIDATION REPORT
+================================================================================
+Execution Timestamp : 2026-09-28 09:33:30
+Platform Root       : C:\wamp64\www\soc-chess
+Python Version      : 3.13.13
+Operating System    : Windows
+================================================================================
+
+[SECTION 1: ARCHITECTURE & DATABASE INTEGRITY]
+  [PASS] MySQL Database Connected (127.0.0.1:3306/soc_chess)
+  [PASS] Verified 9/9 Schema Tables: ai_alerts, ioc_analysis, incident_response, incident_timeline, soc_cases, case_notes, case_evidence, reports, llm_analysis_history
+
+[SECTION 2: THREAT INTELLIGENCE & REPUTATION FEEDS]
+  [PASS] Malicious Indicator (192.168.56.104): Reputation=MALICIOUS, Threat Score=95
+  [PASS] Clean Indicator     (8.8.8.8)        : Reputation=CLEAN, Threat Score=0
+
+[SECTION 3: MULTI-FACTOR 0-100 RISK ENGINE]
+  [PASS] Baseline Normal Traffic: Risk Score = 2.0/100 [LOW]
+  [PASS] Volumetric DDoS Attack : Risk Score = 100.0/100 [CRITICAL]
+  [PASS] Reverse Shell Intrusion: Risk Score = 100.0/100 [CRITICAL]
+
+[SECTION 4: IOC INTELLIGENCE MODULE]
+  [PASS] Type Detection: '192.168.56.104' -> IPv4
+  [PASS] Type Detection: 'CVE-2021-44228' -> CVE Identifier
+  [PASS] Type Detection: 'evil-c2.example' -> Domain
+  [PASS] Type Detection: 'md5_hash' -> MD5 Hash
+  [PASS] Type Detection: 'sha256_hash' -> SHA256 Hash
+  [PASS] IOC Search, Classification, and MySQL Persistence verified.
+
+[SECTION 5: INCIDENT RESPONSE & 9-STAGE WORKFLOW]
+  [PASS] Incident Created: INC-20260928-211738 (Status: NEW)
+  [PASS] Lifecycle Progression: NEW -> TRIAGE -> INVESTIGATION -> CONTAINMENT -> RESOLVED
+  [PASS] Chronological Timeline Verified (6 audit events recorded)
+
+[SECTION 6: SOC CASE MANAGEMENT & EVIDENCE VAULT]
+  [PASS] SOC Case Created: CASE-20260928-212862
+  [PASS] Notes Thread (3 notes) & Evidence Locker (1 artifacts) verified
+
+[SECTION 7: LLM GATEWAY & DEFENSIVE SECURITY]
+  [PASS] Gateway Status: ONLINE
+  [PASS] Multi-Model Cascade: NVIDIA Nemotron-3.5-30B (Primary) -> DeepSeek-V4-Pro (Secondary Fallback) -> Moonshot Kimi-K3 (Tertiary Fallback) -> Deterministic Rule-Based SOC Engine (Offline Fallback)
+  [PASS] Prompt Injection Defense: Injection directives sanitized to [FILTERED_TEXT]
+  [PASS] Multi-Model Failover Execution: Completed via NVIDIA NIM (nemotron-3.5-lightning-30b-a3b) (Duration: 55714ms)
+
+[SECTION 8: REPORTS GENERATION & MULTI-FORMAT EXPORT]
+  [PASS] Report Generated: REP-20260928-269217
+  [PASS] Export Format: JSON     ->    558 bytes
+  [PASS] Export Format: MARKDOWN ->    549 bytes
+  [PASS] Export Format: TXT      ->   1039 bytes
+  [PASS] Export Format: CSV      ->    499 bytes
+  [PASS] Export Format: PDF      ->   1068 bytes
+
+[SECTION 9: AUTOMATED PYTEST SUITE (12 TEST FILES)]
+  Pytest Result: 36 PASSED | 10 FAILED
+  tests/test_api_validation.py::test_ioc_search_missing_field PASSED       [  2%]
+  tests/test_api_validation.py::test_incident_create_missing_title PASSED  [  4%]
+  tests/test_api_validation.py::test_case_create_missing_title PASSED      [  7%]
+  tests/test_api_validation.py::test_attach_evidence_missing_fields PASSED [  9%]
+  tests/test_api_validation.py::test_valid_schemas PASSED                  [ 12%]
+  tests/test_auth_endpoints.py::test_authenticated_api_access PASSED       [ 14%]
+  tests/test_auth_security.py::test_sql_injection_resilience_in_case_search PASSED [ 17%]
+  tests/test_auth_security.py::test_sql_injection_resilience_in_incident_search PASSED [ 19%]
+  tests/test_evidence_integrity.py::test_evidence_hashing_consistency PASSED [ 21%]
+  tests/test_evidence_integrity.py::test_evidence_tamper_detection PASSED  [ 24%]
+  tests/test_incident_response.py::test_incident_lifecycle PASSED          [ 26%]
+  tests/test_incident_response.py::test_invalid_incident_stage_rejected PASSED [ 29%]
+  tests/test_ioc_intelligence.py::test_detect_ioc_types PASSED             [ 31%]
+  tests/test_ioc_intelligence.py::test_ioc_search_malicious_ip PASSED      [ 34%]
+  tests/test_ioc_intelligence.py::test_ioc_search_clean_ip PASSED          [ 36%]
+  tests/test_ioc_intelligence.py::test_ioc_search_cve PASSED               [ 39%]
+  tests/test_ioc_intelligence.py::test_save_and_list_ioc_analysis PASSED   [ 41%]
+  tests/test_llm_gateway.py::test_gateway_initialization PASSED            [ 43%]
+  tests/test_llm_gateway.py::test_rule_fallback_alert_investigation PASSED [ 46%]
+  tests/test_llm_gateway.py::test_ioc_analysis_gateway FAILED              [ 48%]
+  tests/test_llm_gateway.py::test_incident_investigation_gateway FAILED    [ 51%]
+  tests/test_llm_gateway.py::test_case_summary_gateway FAILED              [ 53%]
+  tests/test_llm_gateway.py::test_ask_cyber_question_gateway FAILED        [ 56%]
+  tests/test_llm_security.py::test_prompt_injection_sanitization PASSED    [ 58%]
+  tests/test_llm_security.py::test_input_length_truncation PASSED          [ 60%]
+  tests/test_llm_security.py::test_system_prompt_safety_boundaries PASSED  [ 63%]
+  tests/test_real_nvidia_llm.py::test_nvidia_key_configuration PASSED      [ 65%]
+  tests/test_real_nvidia_llm.py::test_llm_gateway_end_to_end_resilience FAILED [ 68%]
+  tests/test_reports.py::test_report_generation_and_exports PASSED         [ 70%]
+  tests/test_reports.py::test_invalid_export_format PASSED                 [ 73%]
+  tests/test_risk_engine.py::test_base_attack_severities PASSED            [ 75%]
+  tests/test_risk_engine.py::test_risk_calculation_normal_traffic PASSED   [ 78%]
+  tests/test_risk_engine.py::test_risk_calculation_critical_attack PASSED  [ 80%]
+  tests/test_risk_engine.py::test_status_mapping_thresholds PASSED         [ 82%]
+  tests/test_soc_cases.py::test_case_management_flow PASSED                [ 85%]
+  tests/test_soc_cases.py::test_case_invalid_status_fails PASSED           [ 87%]
+  tests/test_spark_lazy_init.py::test_spark_manager_import_is_non_blocking PASSED [ 90%]
+  tests/test_spark_status.py::test_spark_status_is_degraded_when_initialization_fails PASSED [ 92%]
+  tests/test_threat_intel.py::test_known_malicious_ip_lookup PASSED        [ 95%]
+  tests/test_threat_intel.py::test_known_clean_ip_lookup PASSED            [ 97%]
+  tests/test_threat_intel.py::test_cache_fallback PASSED                   [100%]
+  tests/test_llm_gateway.py::test_rule_fallback_alert_investigation
+  tests/test_llm_gateway.py::test_ioc_analysis_gateway
+  tests/test_llm_gateway.py::test_incident_investigation_gateway
+  tests/test_llm_gateway.py::test_case_summary_gateway
+  tests/test_llm_gateway.py::test_ask_cyber_question_gateway
+  tests/test_real_nvidia_llm.py::test_llm_gateway_end_to_end_resilience
+  [FAIL] Pytest run failed: Expected 0 failures, got 10
+
+================================================================================
+                       MASTER VALIDATION SUMMARY TABLE
+================================================================================
+  [PASS] Database Integrity                  : PASS (9/9 Tables Verified)
+  [PASS] Threat Intelligence                 : PASS (Reputation Scoring & Caching Verified)
+  [PASS] Risk Engine                         : PASS (0-100 Score Multi-Evidence Synthesis Verified)
+  [PASS] IOC Intelligence                    : PASS (Type Detection, Search, Persistence Verified)
+  [PASS] Incident Response                   : PASS (9-Stage Lifecycle & Timeline Logging Verified)
+  [PASS] SOC Case Management                 : PASS (CRUD, Notes Thread, Evidence Locker Verified)
+  [PASS] LLM Gateway & Security              : PASS (Cascade Failover, Prompt Defense, Safety Bounds Verified)
+  [PASS] Reports Engine                      : PASS (JSON, Markdown, TXT, CSV, PDF Export Verified)
+  [FAIL] 12 Test Suites (Pytest)             : FAIL (Expected 0 failures, got 10)
+================================================================================
+FINAL SYSTEM STATUS: VALIDATION DETECTED ISSUES
+================================================================================

@@ -1,0 +1,45 @@
+# Environment variables & local databases
+.env
+.env.local
+.env.*.local
+*.db
+soc_chess.db
+
+# Virtual environments
+.venv/
+.venv*/
+env/
+venv/
+ENV/
+
+# Python caches and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+.pytest_cache/
+
+# Large datasets and merged raw corpora (exceeding GitHub limits)
+datasets/network_merged_all.csv
+datasets/network/
+datasets/processed/
+datasets/Splunk-Attack-Data/
+*.npy
+datasets/*.csv
+!datasets/samples/**
+
+# Model files over GitHub 100MB limit
+models/**/*.pkl
+*.pkl
+
+# Frontend dependencies & Vite cache (keep frontend/dist for cloud serving)
+frontend/node_modules/
+frontend/.vite/
+
+# Temporary uploads & scratch
+uploads/scan_*
+scratch/
+
+# OS specific files
+Thumbs.db
+.DS_Store

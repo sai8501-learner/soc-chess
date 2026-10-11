@@ -1,0 +1,29 @@
+{
+  "version": "MLP-NN-1790528356",
+  "training_date": "2026-09-27 22:29:43",
+  "architecture": {
+    "input_features": 19,
+    "hidden_layer_1": 128,
+    "hidden_layer_2": 64,
+    "hidden_layer_3": 32,
+    "output_classes": 9,
+    "activation": "ReLU",
+    "solver": "Adam",
+    "iterations_completed": 24,
+    "best_loss": 0.08247680814071373
+  },
+  "hyperparameters": {
+    "hidden_layers": [
+      128,
+      64,
+      32
+    ],
+    "activation": "relu",
+    "solver": "adam",
+    "learning_rate_init": 0.001,
+    "max_iter": 200
+  },
+  "training_duration_seconds": 27.12,
+  "test_accuracy": 0.9371139060486201,
+  "test_f1_score": 0.9568236032699742
+}

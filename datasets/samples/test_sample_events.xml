@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Events>
+  <Event>
+    <src_ip>192.168.56.104</src_ip>
+    <dst_ip>192.168.56.107</dst_ip>
+    <src_port>54321</src_port>
+    <dst_port>80</dst_port>
+    <protocol>TCP</protocol>
+    <flow_duration>1.2</flow_duration>
+    <attack_cat>DDoS</attack_cat>
+  </Event>
+  <Event>
+    <src_ip>10.0.0.5</src_ip>
+    <dst_ip>10.0.0.1</dst_ip>
+    <src_port>49152</src_port>
+    <dst_port>445</dst_port>
+    <protocol>TCP</protocol>
+    <flow_duration>0.8</flow_duration>
+    <attack_cat>Infiltration</attack_cat>
+  </Event>
+</Events>

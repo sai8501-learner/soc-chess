@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\socchess]
+@="URL:SOC Chess Wireshark Protocol"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\socchess\DefaultIcon]
+@="\"C:\\Program Files\\Wireshark\\Wireshark.exe\",0"
+
+[HKEY_CLASSES_ROOT\socchess\shell]
+
+[HKEY_CLASSES_ROOT\socchess\shell\open]
+
+[HKEY_CLASSES_ROOT\socchess\shell\open\command]
+@="\"C:\\Program Files\\Wireshark\\Wireshark.exe\""

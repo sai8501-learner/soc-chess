@@ -1,0 +1,7 @@
+{
+  "model_version": "MLP-NN-1790528356",
+  "status": "ACTIVE_PRODUCTION",
+  "promoted_at": "2026-09-27 22:29:43",
+  "test_accuracy": 0.9371139060486201,
+  "test_f1": 0.9568236032699742
+}

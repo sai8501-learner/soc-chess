@@ -1,0 +1,19 @@
+{
+    "pipeline": "splunk",
+    "dataset": "splunk_merged.csv",
+    "comparison_date": "2026-08-24T11:20:06.992545",
+    "Random Forest": {
+        "accuracy": 0.918567,
+        "precision": 0.907637,
+        "recall": 0.918567,
+        "macro_f1": 0.86631,
+        "weighted_f1": 0.910315
+    },
+    "XGBoost": {
+        "accuracy": 0.234528,
+        "precision": 0.207835,
+        "recall": 0.234528,
+        "macro_f1": 0.055457,
+        "weighted_f1": 0.210929
+    }
+}
