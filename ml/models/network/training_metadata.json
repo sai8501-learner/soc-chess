@@ -1,6 +1,6 @@
 {
-  "version": "MLP-NN-1790528356",
-  "training_date": "2026-09-27 22:29:43",
+  "version": "MLP-NN-1792760313",
+  "training_date": "2026-10-23 18:28:57",
   "architecture": {
     "input_features": 19,
     "hidden_layer_1": 128,
@@ -23,7 +23,7 @@
     "learning_rate_init": 0.001,
     "max_iter": 200
   },
-  "training_duration_seconds": 27.12,
+  "training_duration_seconds": 24.55,
   "test_accuracy": 0.9371139060486201,
   "test_f1_score": 0.9568236032699742
 }

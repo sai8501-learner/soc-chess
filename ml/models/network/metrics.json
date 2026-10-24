@@ -1,5 +1,5 @@
 {
-  "version": "MLP-NN-1790528356",
+  "version": "MLP-NN-1792760313",
   "architecture": {
     "input_features": 19,
     "hidden_layer_1": 128,
@@ -341,5 +341,5 @@
       "percentage": 0.0
     }
   ],
-  "training_duration_seconds": 27.12
+  "training_duration_seconds": 24.55
 }
